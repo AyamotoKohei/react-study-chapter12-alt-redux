@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import { VFC, useContext } from 'react';
+
+import { ThemeContext } from './context';
+import ThemeProvider from './ThemeProvider';
 import './App.css';
 
-function App() {
+const ThemedButton: VFC = () => {
+  const { key, styles, toggle } = useContext(ThemeContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <button
+      type="button"
+      style={{ background: styles.background, color: styles.foreground }}
+      onClick={toggle}
+      className="themed-button"
+    >
+      current theme is {key}
+    </button>
   );
-}
+};
+
+const App: VFC = () => (
+  <div className="container">
+    <ThemeProvider>
+      <div>
+        <h2>New Context API</h2>
+        <p>React Context API is super awesome!</p>
+      </div>
+      <hr />
+      <ThemedButton />
+    </ThemeProvider>
+  </div>
+);
 
 export default App;
