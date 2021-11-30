@@ -1,6 +1,6 @@
 # react-study-chapter12-alt-redux
 ## 詳細
-[りあクト！ TypeScriptで始めるつらくないReact開発 第3.1版【Ⅲ. React応用編】](https://oukayuka.booth.pm/)の第12章2節の内容を学習した際のファイルです
+[りあクト！ TypeScriptで始めるつらくないReact開発 第3.1版【Ⅲ. React応用編】](https://oukayuka.booth.pm/)の第12章3節の内容を学習した際のファイルです
 ## 学習期間
 2021年11月23日
 ## バージョン
